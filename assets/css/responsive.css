@@ -1,0 +1,106 @@
+/*--------------------- Responsive (Start) ---------------------*/
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi untuk box-container pada bagian home */
+.home .box-container {
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+}
+
+/* Tambahkan delay pada elemen-elemen di dalam box-container */
+.home .content {
+    opacity: 0;
+    animation: fade-in 1s ease-in 0.5s forwards;
+}
+
+.home .image {
+    opacity: 0;
+    animation: fade-in 1s ease-in 1s forwards;
+}
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px){
+    header #menu-btn{
+        display: block;
+      } 
+  
+      .header .navbar{
+        width: 30rem;
+        position: absolute;
+        right: 0; 
+        top:100%;
+        padding: 0rem 2rem;
+        background: #F7F5F2;
+        border: 0.1rem solid #BC8CF2;
+        -webkit-transition: 0.2s linear;
+        -moz-transition: 0.2s linear;
+        -o-transition: 0.2s linear;
+        transition: 0.2s linear;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        height: calc(100vh - 6rem);
+        overflow-y: auto;
+        -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+  
+    .header .navbar.active{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+  
+    .header .navbar a{
+        display: block;
+        color: #000000;
+        padding: 1.5rem 0;
+        margin: 1rem 0;
+    }
+  
+    .navbar::-webkit-scrollbar{
+        width: 0.8rem;
+    }
+  
+    .navbar::-webkit-scrollbar-thumb{
+        border-radius: 1rem;
+        background-color: #BC8CF2;
+    }
+  
+    .navbar::-webkit-scrollbar-track{
+        background: transparent;
+    }
+
+    section, header{
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
+    section, header{
+        padding: 1rem;
+    }
+
+
+
+}
+
+/*--------------------- Responsive (End) ---------------------*/
