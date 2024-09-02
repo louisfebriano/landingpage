@@ -32,13 +32,25 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     scroll-padding-top: 6rem;
 }
 
 body{
     background-color: var(--black);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 section{
     padding: 2rem 5%;
@@ -243,19 +255,23 @@ header #menu-btn:hover{
     color: var(--purple);
 }
 
+.home .content h1 .i-am{
+    color: var(--white);
+}
+
 .home .content h1 {
     font-size: 4rem;
-    color: var(--white);
+    color: var(--purple);
     padding: 1rem 0;
 }
 
-.home .content h1 .soft-eng {
+.home .content h1 .typing-text {
     color: var(--purple);
     transition: transform 0.3s ease-in-out;
     display: inline-block; /* Ensure transform works effectively */
 }
 
-.home .content h1 .soft-eng:hover {
+.home .content h1 .typing-text:hover {
     transform: scale(1.1); /* Zoom in slightly on hover */
 }
 
